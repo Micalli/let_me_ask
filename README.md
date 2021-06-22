@@ -1,46 +1,73 @@
-# Getting Started with Create React App
+<p align="center">
+   <img src="./src/assets/images/logo.svg" alt="letmeask" width="300"/>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/pedrolucasoliva/letmeask?color=835AFD">
 
-## Available Scripts
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/pedrolucasoliva/letmeask?color=835AFD">
+  
+  <a href="https://github.com/pedrolucasoliva/letmeask/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/pedrolucasoliva/letmeask?color=835AFD">
+  </a>
 
-In the project directory, you can run:
+  <img alt="GitHub" src="https://img.shields.io/github/license/pedrolucasoliva/letmeask?color=835AFD">
+</p>
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<p align="center">
+  <a href="#sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#tecnologias-utilizadas">Tecnologias utilizadas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#como-rodar">Como rodar?</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#licença-e-autoria">Licença e Autoria</a>
+</p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+## Sobre
+Projeto desenvolvido durante a Next Level Week #6 da @Rocketseat. Consiste numa plataforma para criar salas de Q&A (perguntas e respostas) e será hospedado gratuitamente no domínio 
+https://www.letmeask.com.br
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+### Acesse os templates no Figma:
+- [Layout Web](https://www.figma.com/file/ITmt54Pz9ssMKU3pRMPHLS/Letmeask-(Copy)?node-id=0%3A1)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Acesse a demo:
+(em breve) https://www.letmeask.com.br
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Tecnologias utilizadas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-### `yarn eject`
+- [ReactJS](https://reactjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Firebase](https://firebase.google.com/?hl=pt)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Como rodar?
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Execute os comandos no seu terminal:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+# Clone o repositório
+$ git clone https://github.com/pedrolucasoliva/letmeask.git
 
-## Learn More
+# Entre no repositório
+$ cd letmeask
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Instale as dependências
+$ yarn install
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Execute a aplicação
+$ yarn start
+```
+
+Acesse em seu navegador http://localhost:3000/
+
+## Licença e Autoria
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](https://github.com/pedrolucasoliva/letmeask/blob/master/LICENSE) para mais detalhes.
+
+Feito com :purple_heart: por [Bruno Micalli](https://github.com/micalli).
+
+
+[![Linkedin Badge](https://img.shields.io/badge/-Bruno_Micalli-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/brunomicalli/)](https://www.linkedin.com/in/brunomicalli/)

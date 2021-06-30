@@ -9,6 +9,8 @@ import { RoomCode } from '../components/RoomCode';
 import { useAuth } from '../hooks/useAuth';
 import { useRoom } from '../hooks/useRoom';
 import { database } from '../services/firebase';
+import { ThemeSwitcher } from '../components/ThemeSwitcher'
+import { useTheme } from '../hooks/useTheme'
 
 import '../styles/room.scss';
 
@@ -22,6 +24,8 @@ export function Room() {
   const params = useParams<RoomParams>();
   const [newQuestion, setNewQuestion] = useState('');
   const roomId = params.id;
+  const { theme } = useTheme()
+
 
   const { title, question } = useRoom(roomId)
 
@@ -62,11 +66,12 @@ export function Room() {
   }
 
   return (
-    <div id="page-room">
+    <div id="page-room" className={theme}>
       <header>
         <div className="content">
           <img src={logoImg} alt="Letmeask" />
           <RoomCode code={roomId} />
+          <ThemeSwitcher/>
         </div>
       </header>
 

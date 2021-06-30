@@ -4,6 +4,7 @@ import IllustrationImg from '../assets/images/illustration.svg';
 import logoImg from '../assets/images/logo.svg';
 import googleIconImg from '../assets/images/google-icon.svg';
 import { Button } from '../components/Button';
+import { ThemeSwitcher } from '../components/ThemeSwitcher'
 
 
 import '../styles/auth.scss';
@@ -12,12 +13,14 @@ import '../styles/button.scss';
 import { useAuth } from '../hooks/useAuth';
 import { FormEvent, useState } from 'react';
 import { database } from '../services/firebase';
+import { useTheme } from '../hooks/useTheme'
 
 export function Home() {
 
     const history = useHistory();
     const { user, signInWithGoogle} = useAuth();    
     const [roomCode , setRoomCode] = useState('');
+    const { theme } = useTheme()
 
 
     async function handleCreateRoom(){
@@ -51,7 +54,7 @@ export function Home() {
         }
 
     return(
-        <div  id="page-auth">
+        <div  id="page-auth" className={theme}>
             <aside>
                 <img src={IllustrationImg} alt="Ilustração simblizando perguntas e respostas" />
                 <strong>Crie sala de Q&amp;A ao-vivo</strong>
@@ -79,7 +82,7 @@ export function Home() {
                         </form>
                     </div>
                 </main>
-           
+                <ThemeSwitcher />
         </div>
     )
 }

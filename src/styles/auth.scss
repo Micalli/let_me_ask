@@ -3,10 +3,46 @@
     align-items: stretch;
     height: 100vh ;
 
+    &.dark {
+        background: #060018;
+    
+        .main-content {
+            
+            h1{
+                color: #fff;
+            }
 
+          h2 {
+            color: #ffffff
+          }
+      
+          form {
+            input {
+              background: #302929;
+              color: white;
+            }
+          }
+      
+          p {
+            font-size: 14px;
+            color: #5BA1FC;
+            margin-top: 16px;
+
+            a{
+                color: #A30B37;
+            }
+
+          }
+        }
+    
+        .create-room {
+          background: #A30B37;
+        }
+      }
+    
     aside{
         flex: 7;
-        background: #835AFD;
+        background: #A30B37;
         color: #fff;
         display: flex;
         flex-direction: column;
@@ -28,6 +64,7 @@
             margin-top: 16px;
             color: #f8f8f8;
         }
+    
     }
     main{
         flex: 8;
@@ -36,6 +73,11 @@
         align-items: center;
         justify-content: center; 
     }
+
+    .toggle {
+        margin-top: 15px;
+        margin-right: 120px;
+      }
 
     .main-content{
         display: flex;
@@ -88,7 +130,7 @@
     height: 50px;
     border-radius: 8px;
     font-weight: 500;
-    background: #ea4335;
+    background: #A30B37;
     color: #fff;
     display: flex;
     justify-content: center;

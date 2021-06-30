@@ -4,13 +4,18 @@
     overflow: hidden;
     
     background: #FFF;
-    border: 1px solid #835afd;
+    border: 1px solid #A30B37;
     cursor: pointer;
     
     display: flex;
   
+    &.dark {
+      background: #060018;
+      color: white;
+    }
+
     div {
-      background: #835afd;
+      background: #A30B37;
       padding: 0 12px;
       display: flex;
       justify-content: center;

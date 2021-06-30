@@ -4,17 +4,64 @@
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
   padding: 24px;
 
+  &.dark {
+    background: #302929;
+    
+    svg path {
+      stroke: #f3f3f3;
+    }
+
+    svg circle {
+      stroke: #f3f3f3;
+    }
+    
+    &.highlighted {
+      background: #A30B37;
+      border: 1px solid #BD6B73;
+      
+      footer .user-info span {
+        color: #fff
+      }
+
+      
+    }
+    
+
+    &.answered {
+      background: #272727;
+      filter: brightness(0.6);
+
+      svg path {
+        stroke: #f3f3f3;
+      }
+    }
+  
+    p {
+      color: #fff;
+    }
+
+    .user-info {
+      span {
+        color: #fff;
+      }
+    }
+  }
+
   & + .question {
     margin-top: 8px;
   }
 
   &.highlighted {
-    background: #f4f0ff;
-    border: 1px solid #835afd;
-
+    background: #A30B37;
+      border: 1px solid #BD6B73;  
+      p {
+        color: #fff;
+      }
     footer .user-info span {
-      color: #413c3c;
+      color: #fff;
     font-weight: 500;
+
+    
 
     }
   }
@@ -68,16 +115,16 @@
         gap: 8px;
 
         &.liked {
-          color: #835afd;
+          color: #1100ff;
 
           svg path {
-            stroke: #835afd;
+            stroke: #1100ff;
           }
         }
       }
 
       &:hover {
-        filter: brightness(0.7);
+        filter: brightness(0.1);
       }
     }
   }

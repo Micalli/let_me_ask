@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import cx from 'classnames';
+import { useTheme } from "../hooks/useTheme"
 
 import '../styles/question.scss';
 
@@ -21,12 +22,13 @@ export function Question({
   isHighLighted = false,
   children,
 }: QuestionProps) {
+  const {theme} = useTheme()
   return (
     <div 
-      className={cx(
-        'question', 
-        { answered: isAnswered },
-        { highlighted: isHighLighted && !isAnswered },
+    className={cx(
+      `question ${theme}`, 
+      {answered: isAnswered},
+      {highlighted: isHighLighted && !isAnswered},
       )}
     >
       <p>{content}</p>

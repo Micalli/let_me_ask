@@ -3,6 +3,9 @@ import { Link, useHistory } from 'react-router-dom';
 import IllustrationImg from '../assets/images/illustration.svg';
 import logoImg from '../assets/images/logo.svg';
 import { Button } from '../components/Button';
+import { ThemeSwitcher } from '../components/ThemeSwitcher'
+
+import { useTheme } from '../hooks/useTheme'
 
 import '../styles/auth.scss';
 import '../styles/button.scss';
@@ -14,6 +17,7 @@ export function NewRoom() {
     const { user } = useAuth();
     const history = useHistory();
     const [ newRoom, setNewRoom] = useState('');
+    const { theme } = useTheme()
 
     async function handleCreateRoom(event : FormEvent) {
         event.preventDefault();
@@ -28,12 +32,12 @@ export function NewRoom() {
             title: newRoom,
             authorId: user?.id,
         })
-        history.push(`/rooms/${firebaseRoom.key}`)
+        history.push(`/admin/rooms/${firebaseRoom.key}`)
 
     }
     
     return(
-        <div  id="page-auth">
+        <div  id="page-auth" className={theme}>
             <aside>
                 <img src={IllustrationImg} alt="Ilustração simblizando perguntas e respostas" />
                 <strong>Crie sala de Q&amp;A ao-vivo</strong>
@@ -62,7 +66,7 @@ export function NewRoom() {
                         </p>
                     </div>
                 </main>
-           
+                <ThemeSwitcher />
         </div>
     )
 }
